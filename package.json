@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/Guiiat/netdoctor#readme",
   "devDependencies": {
-    "@types/node": "^22.15.0",
+    "@types/node": "^26.1.2",
     "typescript": "^5.8.3"
   }
 }
