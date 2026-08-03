@@ -1,0 +1,63 @@
+{
+  "name": "netdoctor-cli",
+  "version": "0.1.0",
+  "description": "Cross-platform, privacy-first CLI for diagnosing DNS, proxy, TCP, TLS, and HTTP connectivity with shareable redacted reports.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "netdoctor": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "prepack": "npm run test"
+  },
+  "keywords": [
+    "network",
+    "network-diagnostics",
+    "network-troubleshooting",
+    "connectivity",
+    "diagnostics",
+    "dns",
+    "tcp",
+    "tls",
+    "proxy",
+    "cli",
+    "typescript",
+    "cross-platform",
+    "developer-tools",
+    "devops"
+  ],
+  "author": "NetDoctor contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guiiat/netdoctor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Guiiat/netdoctor/issues"
+  },
+  "homepage": "https://github.com/Guiiat/netdoctor#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}

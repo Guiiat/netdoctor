@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest a focused diagnostic, reporting, or platform improvement
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve NetDoctor. Do not include credentials, private hosts, usernames,
+        or internal IP addresses in examples.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What network-diagnostics problem is difficult today, and who encounters it?
+      placeholder: "When ..., I cannot tell whether ..."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the CLI input, diagnostic behavior, and expected output.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - DNS
+        - Proxy
+        - TCP
+        - TLS
+        - HTTP
+        - Reporting and redaction
+        - Presets
+        - Cross-platform behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds or other tools have you tried?
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Safety checklist
+      options:
+        - label: I removed credentials and private network information from this request.
+          required: true

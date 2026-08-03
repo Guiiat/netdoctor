@@ -1,0 +1,42 @@
+name: Bug report
+description: Report incorrect diagnostics or CLI behavior
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Review every report for credentials and internal hostnames before submitting.
+        Security vulnerabilities belong in a private security advisory, not this form.
+  - type: input
+    id: version
+    attributes:
+      label: NetDoctor and Node.js versions
+      placeholder: "NetDoctor 0.1.0; Node.js 24.18.0"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11, macOS 15, Ubuntu 24.04, ..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Use placeholders instead of credentials, private hosts, usernames, or IPs.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Sanitized JSON or Markdown report
+      render: shell
